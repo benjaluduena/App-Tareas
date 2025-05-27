@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">App-Tareas</string>
+    <string name="tareas">Tareas</string>
+    <string name="calendario">Calendario</string>
+    <string name="configuraci_n">Configuración</string>
 </resources>
