@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppTareas"
         tools:targetApi="31">
         <activity
+ feature/tareas
+            android:name=".ActivityNuevaTarea"
+
             android:name=".Activity_Lista_Tareas"
             android:exported="true">
             <intent-filter>
@@ -22,12 +25,19 @@
         </activity>
         <activity
             android:name=".MainActivity"
+ develop
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
         </activity>
     </application>
 
