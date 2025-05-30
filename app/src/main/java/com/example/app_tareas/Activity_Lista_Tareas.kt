@@ -3,9 +3,14 @@ package com.example.app_tareas
 import com.example.app_tareas.TaskAdapter
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.content.Intent
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
+
 
 class Activity_Lista_Tareas : AppCompatActivity() {
 
@@ -52,5 +57,12 @@ class Activity_Lista_Tareas : AppCompatActivity() {
         )
         adapter = TaskAdapter(taskList)
         recyclerView.adapter = adapter
+
+
+        val botonMasInfo = findViewById<FloatingActionButton>(R.id.botonagregar)
+        botonMasInfo.setOnClickListener {
+            val intent = Intent(this, ActivityNuevaTarea::class.java)
+            startActivity(intent)
+        }
     }
 }
