@@ -7,7 +7,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import java.text.SimpleDateFormat
@@ -25,7 +27,8 @@ class ActivityNuevaTarea : AppCompatActivity() {
     private var endMinute = 0
 
     private var selectedCategory: Button? = null
-
+    private lateinit var txtTarea: TextView
+    private lateinit var Tarea: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +40,12 @@ class ActivityNuevaTarea : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Asignar el TextView
+        txtTarea = findViewById(R.id.txtTarea)
+
+        // Guardar su contenido en la variable Tarea
+        Tarea = txtTarea.text.toString()
 
         tvDate = findViewById(R.id.tvDate)
         tvTime = findViewById(R.id.tvTime)
@@ -127,7 +136,28 @@ class ActivityNuevaTarea : AppCompatActivity() {
             }
         }
 
+        val backArrow = findViewById<ImageView>(R.id.ivBack)
+        backArrow.setOnClickListener {
+            // Volver a la pantalla anterior
+            finish()
+        }
 
+        val BotonGuardar = findViewById<Button>(R.id.btnCrearTarea)
+        BotonGuardar.setOnClickListener {
+            val intent = Intent(this, Activity_Lista_Tareas::class.java)
+
+            // Pasás los datos al intent
+            intent.putExtra("fecha", tvDate.text.toString())
+            intent.putExtra("hora", tvTime.text.toString())
+            intent.putExtra("tarea", txtTarea.text.toString())
+            intent.putExtra("categoria", selectedCategory?.text.toString())
+
+            // Iniciás la nueva activity
+            startActivity(intent)
+
+            // Mensaje de confirmación
+            Toast.makeText(this, "Tarea creada con éxito", Toast.LENGTH_SHORT).show()
+        }
 
     }
 

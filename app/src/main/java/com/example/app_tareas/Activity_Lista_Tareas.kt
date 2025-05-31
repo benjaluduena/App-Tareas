@@ -25,6 +25,13 @@ class Activity_Lista_Tareas : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerNotes)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val fecha = intent.getStringExtra("fecha")
+        val hora = intent.getStringExtra("hora")
+        val tarea = intent.getStringExtra("tarea")
+        val categoria = intent.getStringExtra("categoria")
+
+
+
         // Lista de ejemplo
         taskList.add(
             Task_Listas_Tarea(
