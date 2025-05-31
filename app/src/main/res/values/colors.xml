@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+ feature/inicio
 
         <color name="colorPrimary">#44c686</color>
         <color name="colorOnPrimary">#FFFFFF</color>
@@ -8,4 +9,12 @@
         <color name="textPrimary">#212121</color>
 
 
+
+    <color name="categoria_normal">#1E1E1E</color> <!-- Verde -->
+    <color name="categoria_seleccionada">#44c686</color> <!-- Blanco (fondo), texto negro -->
+    <color name="text_normal">#44c686</color>
+    <color name="text_seleccionado">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+ develop
 </resources>

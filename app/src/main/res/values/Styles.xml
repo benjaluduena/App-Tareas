@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilo del TimePickerDialog en modo reloj analógico -->
+    <style name="TimePickerTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <!-- Este tema asegura el reloj redondo AM/PM -->
+    </style>
+</resources>
