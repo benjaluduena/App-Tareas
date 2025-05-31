@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">App-Tareas</string>
+    <string name="app_name">App Tareas</string>
     <string name="tareas">Tareas</string>
+    <string name="tareas_desc">Ver todas las tareas</string>
     <string name="calendario">Calendario</string>
-    <string name="configuraci_n">Configuración</string>
+    <string name="calendario_desc">Ver calendario de tareas</string>
+    <string name="configuracion">Configuración</string>
+    <string name="configuracion_desc">Ajustes de la aplicación</string>
+
 </resources>
