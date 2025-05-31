@@ -1,7 +1,9 @@
 package com.example.app_tareas
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -33,14 +35,36 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 3) BottomNavigationView
-        findViewById<BottomNavigationView>(R.id.bottomNav)
-            .setOnItemSelectedListener { item ->
-                when (item.itemId) {
-                    R.id.nav_tareas        -> { /*…*/ true }
-                    R.id.nav_calendario    -> { /*…*/ true }
-                    R.id.nav_configuracion -> { /*…*/ true }
-                    else                   -> false
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_tareas -> {
+                    // Abrir pantalla de lista de tareas
+                    val intent = Intent(this, Activity_Lista_Tareas::class.java)
+                    startActivity(intent)
+                    true
                 }
+                R.id.nav_calendario -> {
+                    // Abrir pantalla de calendario
+                    val intent = Intent(this, ClaseCalendario::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.nav_configuracion -> {
+                    // Abrir pantalla de configuración (si existe)
+                    // por ejemplo:
+                    // val intent = Intent(this, ActivityConfiguracion::class.java)
+                    // startActivity(intent)
+                    true
+                }
+                else -> false
             }
+        }
+
+        // 4) Floating action (o botón) para agregar nueva tarea
+        findViewById<LinearLayout>(R.id.agregarTarea).setOnClickListener {
+            val intent = Intent(this, ActivityNuevaTarea::class.java)
+            startActivity(intent)
+        }
     }
 }
