@@ -58,29 +58,23 @@ class ClaseCalendario : AppCompatActivity() {
         }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+        bottomNav.selectedItemId = R.id.nav_calendario
+
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_tareas -> {
-                    // Abrir pantalla de lista de tareas
-                    val intent = Intent(this, Activity_Lista_Tareas::class.java)
-                    startActivity(intent)
+                    if (this::class.java != Activity_Lista_Tareas::class.java) {
+                        startActivity(Intent(this, Activity_Lista_Tareas::class.java))
+                    }
                     true
                 }
-                R.id.nav_calendario -> {
-                    // Abrir pantalla de calendario
-                    val intent = Intent(this, ClaseCalendario::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.nav_configuracion -> {
-                    // Abrir pantalla de configuración (si existe)
-                    // por ejemplo:
-                    // val intent = Intent(this, ActivityConfiguracion::class.java)
-                    // startActivity(intent)
-                    true
-                }
+                R.id.nav_calendario -> true
                 else -> false
             }
         }
+
+
+
     }
+
 }
