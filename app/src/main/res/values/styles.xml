@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-<style name="CalendarHeader" parent="TextAppearance.MaterialCalendarWidget.Header">
-    <item name="android:textColor">#44c686</item>
-    <item name="android:textSize">20sp</item>
-</style>
-
-<style name="CalendarWeekDay" parent="TextAppearance.MaterialCalendarWidget.WeekDay">
-    <item name="android:textColor">#CCCCCC</item> <!-- gris claro -->
-</style>
-
-<style name="CalendarDate" parent="TextAppearance.MaterialCalendarWidget.Date">
-    <item name="android:textColor">#FFFFFF</item> <!-- blanco -->
-</style>
-
-
+    <!-- Estilo del TimePickerDialog en modo reloj analógico -->
+    <style name="TimePickerTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <!-- Este tema asegura el reloj redondo AM/PM -->
+    </style>
 </resources>
