@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Imagen de bienvenida: asegurate de tener logout_box_line.png en res/drawable -->
+    <ImageView
+        android:id="@+id/mascotaLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logout_box_line"
+        android:contentDescription="Mascota" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a App Tareas"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EMPEZAR"
+        android:backgroundTint="#2ecc71"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp" />
+
+</LinearLayout>
