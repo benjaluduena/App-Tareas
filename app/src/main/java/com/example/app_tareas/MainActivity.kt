@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_tareas -> {
-                    // Abrir pantalla de lista de tareas
-                    val intent = Intent(this, Activity_Lista_Tareas::class.java)
+                    // Abrir pantalla de inicio
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     true
                 }
@@ -50,11 +50,10 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-                R.id.nav_configuracion -> {
-                    // Abrir pantalla de configuración (si existe)
-                    // por ejemplo:
-                    // val intent = Intent(this, ActivityConfiguracion::class.java)
-                    // startActivity(intent)
+                R.id.nav_listas -> {
+                    // Abrir pantalla de listas
+                    val intent = Intent(this, Activity_Lista_Tareas::class.java)
+                     startActivity(intent)
                     true
                 }
                 else -> false
