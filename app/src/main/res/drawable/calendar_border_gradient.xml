@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 1. Fondo con brillo verde suave en los bordes (efecto glow) -->
+    <!-- 1. Glow verde suave en los bordes -->
     <item>
         <shape android:shape="rectangle">
             <gradient
@@ -11,32 +10,30 @@
                 android:centerX="50%"
                 android:centerY="50%"
                 android:startColor="#2bc38b"
-                android:endColor="#ccffe0"
+                android:endColor="#00110a"
                 android:useLevel="false" />
             <corners android:radius="36dp" />
         </shape>
     </item>
 
-    <!-- 2. Segundo gradiente en diagonal para más profundidad -->
+    <!-- 2. Segundo gradiente diagonal para profundidad -->
     <item>
         <shape android:shape="rectangle">
             <gradient
                 android:angle="45"
                 android:startColor="#2bc38b"
-                android:endColor="#F1FDF6"
+                android:endColor="#003324"
                 android:type="linear" />
             <corners android:radius="36dp" />
         </shape>
     </item>
 
-    <!-- 3. Contenido blanco interno que deja ver el borde y degradado -->
+    <!-- 3. Contenido interno negro -->
     <item android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp">
         <shape android:shape="rectangle">
-            <solid android:color="#FFFFFF" />
+            <solid android:color="#101010" />
             <corners android:radius="28dp" />
         </shape>
     </item>
 
 </layer-list>
-
-
