@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 import com.example.app_tareas.databinding.CalendarioBinding
+import android.content.Intent
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatDelegate
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class ClaseCalendario : AppCompatActivity() {
@@ -51,5 +56,25 @@ class ClaseCalendario : AppCompatActivity() {
                 }
             }
         }
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+        bottomNav.selectedItemId = R.id.nav_calendario
+
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_tareas -> {
+                    if (this::class.java != Activity_Lista_Tareas::class.java) {
+                        startActivity(Intent(this, Activity_Lista_Tareas::class.java))
+                    }
+                    true
+                }
+                R.id.nav_calendario -> true
+                else -> false
+            }
+        }
+
+
+
     }
+
 }
