@@ -6,5 +6,7 @@
     <string name="calendario_desc">Ver calendario de tareas</string>
     <string name="configuracion">Configuración</string>
     <string name="configuracion_desc">Ajustes de la aplicación</string>
+    <string name="listas"> Listas </string>
+    <string name="listas_desc" />
 
 </resources>
