@@ -70,6 +70,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.prolificinteractive:material-calendarview:1.4.3")
     implementation("com.jakewharton.threetenabp:threetenabp:1.4.4")
-
+    implementation ("com.google.code.gson:gson:2.10.1")
+    implementation ("com.google.android.material:material:1.10.0")
 
 }
