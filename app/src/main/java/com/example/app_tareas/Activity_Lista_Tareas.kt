@@ -10,6 +10,7 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -90,7 +91,29 @@ class Activity_Lista_Tareas : AppCompatActivity() {
                 filterTasks(newText.orEmpty())
                 return true
             }
-        })}
+        })
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_tareas -> {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    true
+                }
+                R.id.nav_tareas -> {
+                    // Ya estás en esta pantalla
+                    true
+                }
+                R.id.nav_calendario -> {
+                    startActivity(Intent(this, ClaseCalendario::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+
+    } // <- Fin del onCreate
+
 
 
         private fun saveTasks() {
@@ -100,6 +123,9 @@ class Activity_Lista_Tareas : AppCompatActivity() {
         val json = gson.toJson(fullTaskList)
         editor.putString("task_list", json)
         editor.apply()
+
+
+
     }
 
     private fun loadTasks(): MutableList<Task_Listas_Tarea> {
@@ -152,4 +178,7 @@ class Activity_Lista_Tareas : AppCompatActivity() {
         taskList.addAll(filteredList)
         adapter.notifyDataSetChanged()
     }
+
+
+
 }
