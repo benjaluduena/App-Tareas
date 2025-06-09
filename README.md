@@ -19,6 +19,9 @@ Requiere JDK 11 y el Android SDK nivel 24 o superior.
 
 Capturas de pantalla
 
+![image](https://github.com/user-attachments/assets/aca3abf6-e76d-4e34-9753-624465b038eb)   ![image](https://github.com/user-attachments/assets/03541ce1-d3bd-487e-8c47-1346f000409a)
+
+
 
 Autores
 Crettino Cristian - Gaite Augusto - Leiva Rodirigo - Ludueña Benjamin - Valle Juan
